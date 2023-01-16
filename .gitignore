@@ -1,0 +1,13 @@
+.vscode/*
+uploaded_photos/*
+/bot/lib/__pycache__/*
+
+# Logs
+logs/*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv

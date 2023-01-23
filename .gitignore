@@ -1,5 +1,6 @@
 .vscode/*
 uploaded_photos/*
+save_photos/*
 /bot/lib/__pycache__/*
 
 # Logs

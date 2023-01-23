@@ -4,8 +4,8 @@ import sys
 from aiogram.utils import executor
 from loguru import logger
 
-from lib.headlers import *
-from lib.settings import bot, dp
+from bot.headlers import *
+from bot.settings import dp
 
 
 if __name__ == '__main__':

@@ -58,7 +58,8 @@ async def generate_photo(message: types.Message, state: FSMContext):
             return 
 
         logger.info('{} | source file: {} | image_file: {}'.format(message.from_user.id, data['image_source'], data['image_style']))
-        output_file = main(data['image_source'], data['image_style'], data['size'])
+        output_file = main(data['image_source'], data['image_style'], data['size'],
+                            epochs=20)
 
         with open(f'save_photos/{output_file}', 'rb') as photo_out:
             await bot.send_photo(chat_id=message.chat.id, photo=photo_out)

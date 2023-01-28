@@ -1,7 +1,9 @@
 .vscode/*
+
 uploaded_photos/*
 save_photos/*
-/bot/lib/__pycache__/*
+app/bot/__pycache__/*
+app/model/__pycache__/*
 
 # Logs
 logs/*.log
@@ -12,3 +14,6 @@ logs/*.log
 # Environments
 .env
 .venv
+
+todo.md
+main.py

@@ -1,8 +1,6 @@
 import torch
 
-device = torch.device('cpu' if torch.cuda.is_available() else 'cpu')
-
-imsize = 512 if torch.cuda.is_available() else 1000
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # cnn = models.vgg19(weights='DEFAULT').features.to(device).eval()
 

@@ -4,19 +4,20 @@ from PIL import Image
 
 from .constanst import device
 
-def image_loader(image_name: str, size:list) -> torch.Tensor:
+def image_loader(image_name: str, size:list, size_reduction:int) -> torch.Tensor:
+
     image = Image.open(image_name)
     loader = transforms.Compose([
-        transforms.Resize((size[1]//2, size[0]//2)),
+        transforms.Resize((size[1]//size_reduction, size[0]//size_reduction)),
         transforms.ToTensor()
     ])
 
     image = loader(image).unsqueeze(0)
     return image.to(device, torch.float)
 
-def preprocessing(source_file:str, style_file:str, size:list):
-    style_img = image_loader(f'uploaded_photos/{style_file}.jpg', size)
-    source_img = image_loader(f'uploaded_photos/{source_file}.jpg', size)
+def preprocessing(source_file:str, style_file:str, size:list, size_reduction:int=1):
+    style_img = image_loader(f'uploaded_photos/{style_file}.jpg', size, size_reduction)
+    source_img = image_loader(f'uploaded_photos/{source_file}.jpg', size, size_reduction)
     
     return source_img, style_img
 

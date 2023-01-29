@@ -46,7 +46,7 @@ async def set_photo(message: types.Message, state: FSMContext):
     
     logger.info(data)
 
-    await message.photo[-1].download(destination_file=f'uploaded_photos/{file_id}.jpg')
+    await message.photo[-1].download(destination_file=f'app/uploaded_photos/{file_id}.jpg')
 
 @dp.message_handler(state='*', commands=['generate'])
 async def generate_photo(message: types.Message, state: FSMContext):
@@ -61,7 +61,7 @@ async def generate_photo(message: types.Message, state: FSMContext):
         output_file = main(data['image_source'], data['image_style'], data['size'],
                             epochs=20)
 
-        with open(f'save_photos/{output_file}', 'rb') as photo_out:
+        with open(f'app/save_photos/{output_file}', 'rb') as photo_out:
             await bot.send_photo(chat_id=message.chat.id, photo=photo_out)
 
         

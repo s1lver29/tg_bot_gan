@@ -1,0 +1,8 @@
+pip==22.3.1
+aiogram==2.24
+loguru==0.5.3
+python-dotenv==0.21.0
+pillow==9.3.0
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.13.1+cpu
+torchvision==0.14.1

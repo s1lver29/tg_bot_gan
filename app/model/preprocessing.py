@@ -16,8 +16,8 @@ def image_loader(image_name: str, size:list, size_reduction:int) -> torch.Tensor
     return image.to(device, torch.float)
 
 def preprocessing(source_file:str, style_file:str, size:list, size_reduction:int=1):
-    style_img = image_loader(f'uploaded_photos/{style_file}.jpg', size, size_reduction)
-    source_img = image_loader(f'uploaded_photos/{source_file}.jpg', size, size_reduction)
+    style_img = image_loader(f'app/uploaded_photos/{style_file}.jpg', size, size_reduction)
+    source_img = image_loader(f'app/uploaded_photos/{source_file}.jpg', size, size_reduction)
     
     return source_img, style_img
 

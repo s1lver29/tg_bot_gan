@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  bot:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    env_file: .env
+    restart: always
+    volumes:
+      - ./save_photos:/app/save_photos
+      - ./uploaded_photos:/app/uploaded_photos

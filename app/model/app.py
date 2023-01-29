@@ -6,6 +6,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 import torchvision.models as models
 from torchvision.utils import save_image
+import PIL
 
 from loguru import logger
 
@@ -73,9 +74,9 @@ def run_style_transfer(cnn,
 
     return input_img
 
-def main(source_file:str, 
-        style_file:str, 
-        size:list, 
+def main(source_file:str,
+        style_file:str,
+        size:list,
         epochs:int=10, 
         style_weight:int=1000000, 
         content_weight:int=1
@@ -90,7 +91,8 @@ def main(source_file:str,
                         content_img, style_img, input_img, num_steps=epochs, style_weight=style_weight, content_weight=content_weight)
 
     generate_file_name = uuid4().hex
-    save_image(output, f"save_photos/{generate_file_name}.jpg")
+    logger.info(f'{generate_file_name}.jpg')
+    save_image(output, f"app/save_photos/{generate_file_name}.jpg")
 
     return f"{generate_file_name}.jpg"
 

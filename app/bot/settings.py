@@ -1,4 +1,4 @@
-from os import getenv, path
+from os import getenv
 from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage

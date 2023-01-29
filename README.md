@@ -11,3 +11,6 @@ echo API_TOKEN=<YOUR_TELEGRAM:TOKEN> > .env
 ```bash  
 docker-compose up --build
 ```
+------
+# Origin  
+[A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576)

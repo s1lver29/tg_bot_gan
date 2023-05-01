@@ -8,7 +8,9 @@ The final project of the deep learning school from MIPT (1 sem, fall 2022)
 ![](https://github.com/s1lver29/tg_bot_gan/blob/main/gif/example_style_photo.gif)
 ------
 Инициализация бота:  
-```bash  
+```bash
+git clone https://github.com/s1lver29/tg_bot_gan.git
+# Перейти в директорию проекта и положить свой токен тг бота
 echo API_TOKEN=<YOUR_TELEGRAM:TOKEN> > .env
 ```
 ------
